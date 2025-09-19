@@ -1,0 +1,164 @@
+<mxfile>
+  <diagram id="blockDiagram" name="Block Diagram">
+    <mxGraphModel dx="1180" dy="720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Input: Keypad -->
+        <mxCell id="keypad" value="4x4 Keypad" style="shape=rectangle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Input: Power Supply -->
+        <mxCell id="power" value="Power Supply" style="shape=rectangle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="240" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Arduino (Processor) -->
+        <mxCell id="arduino" value="Arduino Uno R3" style="shape=rectangle;whiteSpace=wrap;rounded=1;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="200" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Outputs -->
+        <mxCell id="led" value="RGB LED" style="shape=rectangle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="100" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="servo" value="Micro Servo" style="shape=rectangle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="160" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="buzzer" value="Buzzer" style="shape=rectangle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="220" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="serial" value="Serial Monitor" style="shape=rectangle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="280" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Connections -->
+        <mxCell id="edge1" edge="1" parent="1" source="keypad" target="arduino">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge2" edge="1" parent="1" source="power" target="arduino">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge3" edge="1" parent="1" source="arduino" target="led">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge4" edge="1" parent="1" source="arduino" target="servo">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge5" edge="1" parent="1" source="arduino" target="buzzer">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge6" edge="1" parent="1" source="arduino" target="serial">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="flowchart" name="Flowchart">
+    <mxGraphModel dx="1180" dy="720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Start -->
+        <mxCell id="start" value="Start" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="300" y="60" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- System Ready -->
+        <mxCell id="ready" value="System Ready" style="shape=rectangle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="300" y="120" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Enter Code -->
+        <mxCell id="enter" value="Enter Code" style="shape=rectangle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="300" y="180" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Check Submit -->
+        <mxCell id="submit" value="Check Submit" style="shape=rectangle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="300" y="240" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Processing -->
+        <mxCell id="process" value="Processing" style="shape=rectangle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="300" y="300" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision -->
+        <mxCell id="decision" value="Correct Code?" style="rhombus;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="300" y="360" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Granted -->
+        <mxCell id="granted" value="Access Granted" style="shape=rectangle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="160" y="460" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Denied -->
+        <mxCell id="denied" value="Access Denied" style="shape=rectangle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="440" y="460" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Reset -->
+        <mxCell id="reset" value="Reset System" style="shape=rectangle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="300" y="540" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e1" edge="1" parent="1" source="start" target="ready">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e2" edge="1" parent="1" source="ready" target="enter">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e3" edge="1" parent="1" source="enter" target="submit">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e4" edge="1" parent="1" source="submit" target="process">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e5" edge="1" parent="1" source="process" target="decision">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e6" edge="1" parent="1" source="decision" target="granted">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell id="label1" value="Yes" style="text;html=1;" vertex="1" connectable="0" parent="e6">
+            <mxGeometry x="0.25" y="-0.5" relative="1" as="geometry"/>
+          </mxCell>
+        </mxCell>
+
+        <mxCell id="e7" edge="1" parent="1" source="decision" target="denied">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell id="label2" value="No" style="text;html=1;" vertex="1" connectable="0" parent="e7">
+            <mxGeometry x="0.75" y="-0.5" relative="1" as="geometry"/>
+          </mxCell>
+        </mxCell>
+
+        <mxCell id="e8" edge="1" parent="1" source="granted" target="reset">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e9" edge="1" parent="1" source="denied" target="reset">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
